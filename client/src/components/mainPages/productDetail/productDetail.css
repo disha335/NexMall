@@ -1,0 +1,122 @@
+.detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+    font-size: 150%;
+    background-color: #f9f9f9;
+    gap: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.detail img {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    margin-left: 40px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box-detail {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box-detail .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.box-detail h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.box-detail h6 {
+    font-size: 1rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box-detail span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: crimson;
+    margin: 10px 0;
+}
+
+.box-detail p {
+    line-height: 1.6;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #555;
+    opacity: 0.9;
+}
+
+.box-detail .content-small {
+    font-size: 0.96rem; /* Adjust the size as needed */
+    line-height: 1.5;
+    color: #555; /* Optional: Change color to make it visually distinct */
+}
+
+.box-detail .buy_now {
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 20px;
+}
+
+.box-detail .buy_now:hover, .box-detail .cart:hover {
+    background-color: rgb(240, 130, 21);
+    box-shadow: 0 4px 10px rgba(220, 20, 60, 0.5);
+}
+
+.box-detail .cart {
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}

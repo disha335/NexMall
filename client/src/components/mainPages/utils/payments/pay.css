@@ -1,0 +1,44 @@
+.payment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-color: #f9f9f9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.payment-container h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.payment-container p{
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.payment-container .pay-btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.payment-container .pay-btn:hover{
+    background-color: #19cd43;
+}
+
+
+.payment-success {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #633ddf;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

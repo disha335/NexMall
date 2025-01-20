@@ -1,0 +1,177 @@
+*{
+    font-family: 'Roboto', 'Arial', sans-serif;
+  }
+
+header{
+    min-height: 70px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    filter: none;
+}
+.logo {
+    display: flex; /* Aligns all items in the .logo container in a row */
+    align-items: center; /* Vertically centers the items */
+}
+
+.logo-container {
+    display: flex; /* Ensures the image and text are inline */
+    align-items: center; /* Vertically centers the image and text */
+    gap: 10px; /* Adds space between the image and text */
+    margin-top: 27px;
+}
+
+.logo img {
+    display: block; /* Prevents inline spacing issues */
+    margin-right: 10px; /* Adds additional spacing if needed */
+    width: 40px; /* Ensures the size is controlled */
+    height: 40px;
+    filter: none; /* Resets any applied filters */
+}
+ 
+.logo a {
+    text-decoration: none; /* Optional: Remove underline from the link */
+    color: inherit; /* Optional: Match the link color with other text */
+    font-size: 1.5rem; /* Adjust text size as needed */
+    font-weight: bold; /* Make the text stand out */
+}
+
+header ul li{
+    display: inline-block;
+    opacity: 0.7;
+    padding: 0 20px;
+}
+
+header ul li:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.menu{
+    display: none;
+}
+
+.cart-icon{
+    position: relative;
+}
+
+.cart-icon span{
+    background-color: crimson;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 7px;
+    font-size: 10px;
+}
+
+.promo-slider {
+    display: flex;
+    overflow: hidden;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    width: 1900px;
+}
+
+.promo-slide {
+    min-width: 100%;
+    animation: slide 20s infinite;
+}
+
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .search-input {
+    flex: 1; 
+    padding: 15px 20px; 
+    font-size: 1rem;
+    border: none;
+    border-radius: 100px; 
+    outline: none; 
+    box-sizing: border-box;
+  }
+
+  .search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+  
+  .search-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 40px;
+    margin-top: 1px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .search-btn:hover {
+    background: #1e90ff;
+  }
+
+  .search-btn:active {
+    transform: scale(0.95); /* Button press animation */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.login_btn, .logout_btn {
+    background: #ff6600; /* Orange background */
+    color: #fff;         /* White text */
+    padding: 10px 20px;  /* Add padding for a button-like appearance */
+    border-radius: 5px;  /* Rounded corners */
+    text-align: center;  /* Center text */
+    display: inline-block; /* Make it behave like a button */
+    font-size: 16px;     /* Increase font size */
+    font-weight: bold;   /* Make text bold */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease; /* Smooth hover effect */
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.login_btn:hover, .logout_btn:hover{
+    background: #cc5200; /* Darker orange on hover */
+    cursor: pointer;     /* Pointer cursor on hover */
+}
+
+.login_btn a,
+.logout_btn a{
+    color: inherit;      /* Ensure link inherits text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.active-link {
+    color: #e8831e; /* Highlight color */
+    font-weight: bold;
+    text-decoration: underline;
+}

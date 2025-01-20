@@ -1,0 +1,140 @@
+.product_card {
+    max-width: 350px;
+    height: 500px;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 12px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product_card img {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product_box {
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.product_box h2 {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+    transition: color 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product_box h2:hover {
+    color: crimson;
+}
+
+.product_box span {
+    color: crimson;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product_box p {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.row_btn {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row_btn a {
+    width: 48%;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn_buy {
+    background: #555;
+}
+
+#btn_cart {
+    background: #555;
+}
+
+#btn_buy:hover, 
+#btn_cart:hover {
+    background: #333333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#btn_delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#btn_edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+#btn_delete:hover {
+    background-color: #c82333;
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5);
+}
+
+#btn_edit:hover {
+    background-color: #e0a800;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+.product_card:hover #btn_edit, 
+.product_card:hover #btn_delete, 
+.product_card:hover #btn_buy, 
+.product_card:hover #btn_cart {
+    box-shadow: none;
+}
+
+.wishlist_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+  
+.wishlist_icon:hover {
+transform: scale(1.1);
+transition: all 0.2s ease-in-out;
+}

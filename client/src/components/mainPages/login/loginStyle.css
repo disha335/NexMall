@@ -1,0 +1,105 @@
+*{
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+
+.login-page, .register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .login-form, .register-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .input-container {
+    margin-bottom: 1rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 4px rgba(106, 17, 203, 0.5);
+  }
+  
+  /* Buttons */
+  .login-btn, .regsiter-btn {
+    width: 100%;
+    padding: 10px;
+    background: #6a11cb;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-btn:hover, .regsiter-btn:hover {
+    background: #2575fc;
+  }
+  
+  /* Register Link */
+  .register-link, .login-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2575fc;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .register-link:hover, .login-link:hover {
+    text-decoration: underline;
+  }
+
+  .logo-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    width: 80px; 
+    height: 80px;
+  }
+  
+  @media (max-width: 480px) {
+    .login-form, .register-form {
+      padding: 1.5rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      font-size: 0.9rem;
+    }
+  
+    .login-btn, .regsiter-btn {
+      font-size: 0.9rem;
+    }
+  
+    .register-link, .login-link {
+      font-size: 0.8rem;
+    }
+  }
