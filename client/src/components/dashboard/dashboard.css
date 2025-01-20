@@ -12,7 +12,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 80vh;
     width: 250vh;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     padding: 0 80px;
     color: #fff;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-top: -20px;
 }
 
 /* Heading Styles */
