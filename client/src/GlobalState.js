@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import ProductApi from "./components/api/ProductApi";
-import axios from "axios";
 import UserApi from "./components/api/UserApi";
+import api from "./api";
 
 export const GlobalState = createContext()
 
@@ -11,7 +11,7 @@ export const DataProvider = ({children}) => {
 
     const refreshToken = async() => {
         try {
-            const res = await axios.post('/user/refresh_token');
+            const res = await api.post('/user/refresh_token');
             setToken(res.data.accessToken);
         } catch (err) {
             console.error("Failed to refresh token:", err.response?.data || err.message);

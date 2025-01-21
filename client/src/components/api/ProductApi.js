@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import { useEffect, useState } from 'react'
+import api from '../../api';
 
 const ProductApi = () => {
 
@@ -15,7 +15,7 @@ const ProductApi = () => {
     const getProducts = async() => {
         try{
             const query = new URLSearchParams(filters).toString();
-            const res = await axios.get(`/api/products?${query}`);
+            const res = await api.get(`/api/products?${query}`);
             setProducts(res.data.products)
             setTotalCount(res.data.totalCount)
         }catch(err){
