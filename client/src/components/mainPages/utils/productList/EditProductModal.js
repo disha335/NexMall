@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./editProductModal.css";
+import api from "../../../../api";
 
 const EditProductModal = ({ product, onClose, onUpdate }) => {
     const [updatedProduct, setUpdatedProduct] = useState({
@@ -38,7 +38,7 @@ const EditProductModal = ({ product, onClose, onUpdate }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`/api/products/${product._id}`, updatedProduct);
+            await api.put(`/api/products/${product._id}`, updatedProduct);
             alert("Product updated successfully!");
             onUpdate(); // Callback to refresh the product list
             onClose();  // Close the modal

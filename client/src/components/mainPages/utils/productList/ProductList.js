@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { GlobalState } from '../../../../GlobalState';
 import EditProductModal from './EditProductModal.js';
-import axios from 'axios';
 import { FaHeart } from 'react-icons/fa';
+import api from '../../../../api.js';
 
 
 const ProductList = ({ product, isAdmin }) => {
@@ -27,7 +27,7 @@ const ProductList = ({ product, isAdmin }) => {
   const deleteProduct = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`/api/products/${id}`);
+        await api.delete(`/api/products/${id}`);
         alert('Product Deleted Successfully!');
       } catch (err) {
         console.error('Error:', err.response || err.message);

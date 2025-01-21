@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../../../../api';
 
 const PayForm = () => {
   const [cardNumber, setCardNumber] = useState('');
@@ -36,7 +36,7 @@ const PayForm = () => {
     setError('');
 
     try {
-      await axios.post('/api/pay', { amount: 999 });
+      await api.post('/api/pay', { amount: 999 });
       window.location.href = '/success'
     } catch (err) {
       console.error("Error:", err.response || err.message);

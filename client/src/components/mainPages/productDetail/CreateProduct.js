@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import './createProduct.css'
+import api from '../../../api';
 
 const CreateProduct = () => {
 
@@ -41,7 +41,7 @@ const CreateProduct = () => {
     const createProduct = async e => {
         e.preventDefault();
         try{
-            await axios.post('/api/products', {...product})
+            await api.post('/api/products', {...product})
             alert('Product added successfully');
             setProduct(initialProdState);
         }
