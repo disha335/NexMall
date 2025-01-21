@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
 import { GlobalState } from '../../../GlobalState';
 import './category.css'
+import api from '../../../api';
 
 const Category = () => {
     const [categories, setCategories] = useState([]);
@@ -13,7 +13,7 @@ const Category = () => {
     useEffect(() => {
         const getCategories = async () => {
             try {
-                const res = await axios.get('/api/category');
+                const res = await api.get('/api/category');
                 setCategories(res.data); 
             } catch (err) {
                 console.error('Error fetching categories:', err);
@@ -31,7 +31,7 @@ const Category = () => {
         }
     
         try {
-            const res = await axios.post("/api/category",{ name: newCategory }, 
+            const res = await api.post("/api/category",{ name: newCategory }, 
                 {
                     headers: {
                         Authorization: `${token}`,
@@ -49,7 +49,7 @@ const Category = () => {
     };
 
     const fetchCategories = async () => {
-        const { data } = await axios.get('/api/category');
+        const { data } = await api.get('/api/category');
         setCategories(data);
     };
 
@@ -60,7 +60,7 @@ const Category = () => {
             return
         }
         try{
-            await axios.put(`/api/category/${id}`, {name: updatedName}, {
+            await api.put(`/api/category/${id}`, {name: updatedName}, {
                 headers:{
                     "Authorization": `${token}`,
                 }
@@ -76,7 +76,7 @@ const Category = () => {
     const deleteCtgry = async(id) => {
         if (window.confirm("Are you sure you want to delete this category?")){
             try{
-                await axios.delete(`/api/category/${id}`,{
+                await api.delete(`/api/category/${id}`,{
                     headers:{
                         Authorization: `${token}`,
                     }

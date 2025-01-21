@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import { MdOutlineMenu } from "react-icons/md";
 import { MdClose } from 'react-icons/md';
 import { MdAddShoppingCart } from "react-icons/md";
@@ -9,7 +8,7 @@ import { GlobalState } from '../../GlobalState';
 import { useContext } from 'react';
 import Dashboard from '../dashboard/Dashboard';
 import Features from '../mainPages/utils/features/Features';
-import { color } from '@mui/system';
+import api from '../../api';
 
 
 const Header = () => {
@@ -22,7 +21,7 @@ const Header = () => {
     const isAllPage = pathname === '/'
 
     const logOutUser = async() => {
-        await axios.get('/user/logout')
+        await api.get('/user/logout')
         localStorage.clear()
 
         setIsAdmin(false)
