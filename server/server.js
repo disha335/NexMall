@@ -8,7 +8,7 @@ const app = express()
 
 app.use(cors(
     {
-        origin: ["https://nexmall.vercel.app"],
+        origin: "https://nexmall.vercel.app",
         methods: ["POST", "GET"],
         credentials: true
     }
