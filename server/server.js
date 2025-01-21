@@ -8,8 +8,8 @@ const app = express()
 
 app.use(cors(
     {
-        origin: "https://nexmall.vercel.app",
-        methods: ["POST", "GET"],
+        origin: ["http://localhost:3000", "https://nexmall.vercel.app"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
 ));
