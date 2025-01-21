@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 
 app.get('/', (req, res)=>{
-    res.json({"msg": "this is example"})
+    res.json({"msg": "Backend apis running successfully"})
 })
 
 app.listen(PORT, ()=>{
