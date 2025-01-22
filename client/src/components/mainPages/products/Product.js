@@ -3,6 +3,7 @@ import { GlobalState } from '../../../GlobalState';
 import ProductList from '../utils/productList/ProductList';
 import Pagination from '../utils/pagination/Pagination';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Product = ({ category }) => {
   const state = useContext(GlobalState);
@@ -25,12 +26,13 @@ const Product = ({ category }) => {
 
   useEffect(() => {
       const fetchFilteredProducts = async () => {
-      const queryParams = new URLSearchParams(filters).toString();
-      const response = await fetch(`/api/products?${queryParams}`);
-      const data = await response.json();
-      console.log("Filtered Products:", data.products);
-      setProducts([]||data.products)
-      setTotalCount(data.totalCount || 0);
+        const queryParams = new URLSearchParams(filters).toString();
+        const response = await axios.get(`/api/products?${queryParams}`, {
+          baseURL: 'https://nex-mall.vercel.app',
+        });
+        console.log("Filtered Products:", response.data.products);
+        setProducts([]||response.data.products)
+        setTotalCount(response.data.totalCount || 0);
     };
 
     if (filters.category) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MdOutlineMenu } from "react-icons/md";
 import { MdClose } from 'react-icons/md';
 import { MdAddShoppingCart } from "react-icons/md";
@@ -14,6 +14,7 @@ import api from '../../api';
 const Header = () => {
 
     const state = useContext(GlobalState);
+    console.log(state)
     const [isLogged, setIsLogged] = state.userApi.isLogged
     const [isAdmin, setIsAdmin] = state.userApi.isAdmin
     const [cart, setCart] = state.userApi.cart
