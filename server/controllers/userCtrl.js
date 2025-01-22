@@ -94,7 +94,9 @@ const UserCtrl = {
 
         res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
-            path: '/user/refresh_token'
+            secure: true,
+            sameSite: 'none,
+            path: '/user/refresh_token',
         })
 
         res.json({accessToken})
