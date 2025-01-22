@@ -8,8 +8,8 @@ const app = express()
 
 app.use(cors(
     {
-        origin: [],
-        methods: ["POST", "GET"],
+        origin: ["http://localhost:3000", "https://nexmall.vercel.app"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
 ));
@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 
 app.get('/', (req, res)=>{
-    res.json({"msg": "Backend apis running successfully"})
+    res.json({"msg": "Backend api running successfully"})
 })
 
 app.listen(PORT, ()=>{

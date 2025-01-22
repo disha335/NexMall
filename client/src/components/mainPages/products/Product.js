@@ -31,8 +31,8 @@ const Product = ({ category }) => {
           baseURL: 'https://nex-mall.vercel.app',
         });
         console.log("Filtered Products:", response.data.products);
-        setProducts([]||response.data.products)
-        setTotalCount(response.data.totalCount || 0);
+        setProducts([]||response.products)
+        setTotalCount(response.totalCount || 0);
     };
 
     if (filters.category) {
